@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react'
 import "./Login.css"
+import axios from "axios"
 
 type Props = {
     log_in: (access: string) => void
@@ -26,8 +27,11 @@ class Login extends React.Component<Props, State> {
     };
 
     enter = () => {
-        console.log(this.state.user)
-        console.log(this.state.pass)
+        const name = this.state.user;
+        const pass = this.state.pass;
+        axios.post("/enter", { name, pass })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
     }
 
     render() {

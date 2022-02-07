@@ -1,0 +1,4 @@
+liz.rm("build")
+liz.cmd("npm", {"run", "build"})
+liz.rm("../../cmds/abacuz/app")
+liz.cp("build", "../../cmds/abacuz/app")
