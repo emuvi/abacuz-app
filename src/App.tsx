@@ -1,35 +1,48 @@
-import React from 'react';
-import './App.css';
-import Login from "./Login"
-import Desk from "./Desk"
+import React, { useDebugValue } from "react";
+import { BaseState, BaseStart, BaseContext } from "./Base";
+import Login from "./Login";
+import Desk from "./Desk";
+import "./App.css";
 
-type Props = {};
+class App extends React.Component<{}, BaseState> {
+  state = BaseStart;
 
-type State = {
-  token: string;
-};
-
-class App extends React.Component<Props, State> {
-
-  state: State = {
-    token: ""
-  };
+  is_logged = () => this.state.token === "";
 
   log_in = (access: string) => {
-    this.setState((state) => ({ token: access }));
-  }
+    this.setState((_) => ({
+      token: access,
+    }));
+  };
 
   log_out = () => {
-    this.setState((_) => ({ token: "" }));
-  }
+    this.setState((_) => ({
+      token: "",
+    }));
+  };
+
+  base = {
+    is_logged: this.is_logged,
+    log_in: this.log_in,
+    log_out: this.log_out,
+  };
 
   render() {
-    const is_logged = !!this.state.token;
     return (
-      <div className='App'>
-        <div className='AppHead'>Abacuz</div>
-        <div className='AppBody'>
-          {!is_logged ? (<Login log_in={this.log_in} />) : (<Desk log_out={this.log_out} />)}
+      <div className="App">
+        <div className="AppHead">Abacuz</div>
+        <div className="AppBody">
+          <BaseContext.Provider value={this.state}>
+            <BaseContext.Consumer>
+              {(value) =>
+                this.is_logged() ? (
+                  <Login base={this.base} />
+                ) : (
+                  <Desk base={this.base} />
+                )
+              }
+            </BaseContext.Consumer>
+          </BaseContext.Provider>
         </div>
       </div>
     );
