@@ -1,9 +1,0 @@
-.Login {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.Login * {
-    margin: 3px;
-}

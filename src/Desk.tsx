@@ -8,7 +8,7 @@ class Desk extends React.Component<BaseProps, State> {
 
   render() {
     return (
-      <div>
+      <div className="Frame">
         <div>Desk</div>
         <div>
           <div>
@@ -17,7 +17,7 @@ class Desk extends React.Component<BaseProps, State> {
               {(value) => <span>{value.token}</span>}
             </BaseContext.Consumer>
           </div>
-          <button onClick={() => this.props.base.log_out()}>Exit</button>
+          <button onClick={() => this.props.base.logOut()}>Exit</button>
         </div>
       </div>
     );
