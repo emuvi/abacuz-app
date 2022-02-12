@@ -1,7 +1,7 @@
 {
   "name": "abacuz-app",
   "version": "0.1.0",
-  "description": "AbacuzApp is an application that interfaces with an Abacuz server to show an easy web access for file storage with authentication and authorization.",
+  "description": "AbacuzApp is an user application that interfaces with an Abacuz server to show an easy web access for file storage with authentication and authorization.",
   "repository": "https://github.com/emuvi/abacuz-app",
   "author": "Éverton M. Vieira",
   "license": "LGPL-3.0-only",
