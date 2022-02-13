@@ -1,10 +1,12 @@
 {
   "name": "abacuz-app",
-  "version": "0.1.0",
-  "description": "AbacuzApp is a React user application that interacts with the Abacuz server to show an easy web access for file storage with authentication and authorization.",
+  "displayName": "AbacuzApp",
+  "description": "AbacuzApp is a React user application interacting with the Abacuz server to show an easy web access for file storage with authentication and authorization.",
+  "keywords": [], 
   "repository": "https://github.com/emuvi/abacuz-app",
   "author": "Éverton M. Vieira",
   "license": "LGPL-3.0-only",
+  "version": "0.1.0",
   "homepage": "./",
   "dependencies": {
     "@types/node": "^16.11.22",
