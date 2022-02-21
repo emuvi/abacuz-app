@@ -1,42 +1,16 @@
 {
-  "name": "abacuz-app",
-  "displayName": "AbacuzApp",
-  "description": "AbacuzApp is a React user application interacting with the Abacuz server to show an easy web access for file storage with authentication and authorization.",
-  "keywords": [], 
-  "repository": "https://github.com/emuvi/abacuz-app",
-  "author": "Éverton M. Vieira",
-  "license": "LGPL-3.0-only",
-  "version": "0.1.1",
-  "homepage": "./",
-  "dependencies": {
-    "@types/node": "^16.11.22",
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "axios": "^0.25.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.5.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "abacuz-app",
+	"displayName": "AbacuzApp",
+	"description": "AbacuzApp is a Qinpel user application on the Pointel platform that shows an easy interface for file manipulation on the cloud.",
+	"keywords": [],
+	"repository": "https://github.com/emuvi/abacuz-app",
+	"author": "Éverton M. Vieira",
+	"license": "LGPL-3.0-only",
+	"version": "0.1.1",
+	"main": "./build/main.js",
+	"types": "./types/main.d.ts",
+	"dependencies": {
+		"qinpel-cps": "file:../qinpel-cps",
+		"qinpel-res": "file:../qinpel-res"
+	}
 }

@@ -1,5 +1,9 @@
-liz.rm("build")
-liz.cmd("npm", {"run", "build"})
-liz.rm("../../cmds/abacuz/app")
-liz.cp("build", "../../cmds/abacuz/app")
-print("Finished!")
+#!/bin/liz
+print("Testing...")
+name = "abacuz"
+liz.run("build")
+liz.cmd("browserify", {"build/index.js", "--debug", "-o", "public/index.js"})
+liz.rm("../../cmds/qinpel-srv/app/" .. name)
+liz.mkdir("../../cmds/qinpel-srv/app/" .. name)
+liz.cp("public", "../../cmds/qinpel-srv/app/" .. name)
+print("Done Test!")

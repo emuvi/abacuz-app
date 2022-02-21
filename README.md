@@ -1,4 +1,3 @@
 # AbacuzApp
 
-AbacuzApp is a React user application interacting with the Abacuz server to show an easy web access for file storage with authentication and authorization.
-
+AbacuzApp is a Qinpel user application on the Pointel platform that shows an easy interface for file manipulation on the cloud.
