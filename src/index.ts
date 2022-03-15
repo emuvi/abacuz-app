@@ -2,7 +2,7 @@ import { QinColumn, QinLabel } from "qinpel-cps"
 
 class Abacuz extends QinColumn {
 
-    private qinHello: QinLabel = new QinLabel("Hello, world!");
+    private qinHello: QinLabel = new QinLabel("Hello, Abacuz world!");
 
     public constructor() {
         super();
