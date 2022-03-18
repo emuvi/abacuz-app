@@ -1,18 +1,20 @@
 import {
-  QinColumn,
-  QinLine,
+  QinAsset,
   QinButton,
-  QinLabel,
+  QinColumn,
   QinExplorer,
+  QinIcon,
+  QinLine,
 } from "qinpel-cps";
+import { QinGrandeur } from "qinpel-res";
 
 class Abacuz extends QinColumn {
   private qinTopBar = new QinLine();
   private qinLoad = new QinButton({
-    label: new QinLabel("Load"),
+    icon: new QinIcon(QinAsset.FaceRedo, QinGrandeur.SMALL),
   });
   private qinUp = new QinButton({
-    label: new QinLabel("Up"),
+    icon: new QinIcon(QinAsset.FaceArrowUp, QinGrandeur.SMALL),
   });
   private qinExplorer = new QinExplorer();
 
@@ -22,7 +24,7 @@ class Abacuz extends QinColumn {
     this.qinLoad.install(this.qinTopBar);
     this.qinLoad.addAction((ev) => {
       if (ev.isPrimary) {
-        this.qinExplorer.load("", (loaded) => {
+        this.qinExplorer.reload((loaded) => {
           this.qinpel().frame.statusInfo(loaded);
         });
       }
