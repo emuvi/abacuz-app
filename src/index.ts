@@ -1,12 +1,20 @@
-import { QinColumn, QinLabel } from "qinpel-cps"
+import { QinColumn, QinLine, QinButton, QinLabel, QinExplorer } from "qinpel-cps"
 
 class Abacuz extends QinColumn {
 
-    private qinHello: QinLabel = new QinLabel("Hello, Abacuz world!");
+    private qinTopBar = new QinLine();
+    private qinTest = new QinButton({
+        label: new QinLabel("Test")
+    });
+    private qinExplorer = new QinExplorer();
 
     public constructor() {
         super();
-        this.qinHello.install(this);
+        this.qinTopBar.install(this);
+        this.qinTest.install(this.qinTopBar);
+        this.qinTopBar.putAsFlexMin();
+        this.qinExplorer.install(this);
+        this.qinExplorer.putAsFlexMax();
     }
 
 }
